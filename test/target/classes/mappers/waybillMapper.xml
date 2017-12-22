@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.WaybillMapper">
+	
+	<insert id="insertWaybill">
+		INSERT INTO WAYBILL(ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS)
+		VALUES (#{order_num}, #{sender}, #{receiver}, #{quantity}, #{p_name}, #{c_point}, #{s_point}, #{address})
+	</insert>
+	
+	<select id="readWaybill" resultType="WaybillVO">
+		SELECT WB_NUM, ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS
+		FROM WAYBILL
+		WHERE WB_NUM = #{wb_num}
+	</select>
+	
+	<update id="updateWaybill">
+		UPDATE WAYBILL 
+		SET	SENDER = #{sender}, RECEIVER = #{receiver}, QUANTITY = #{quantity}, P_NAME = #{p_name}, C_POINT = #{c_point}, S_POINT = #{s_point}, ADDRESS = #{address}
+		WHERE WB_NUM = #{wb_num} 
+	</update>
+	
+	<delete id="deleteWaybill">
+		DELETE FROM WAYBILL
+		WHERE WB_NUM = #{wb_num} 
+	</delete>
+	
+	<select id="listAll" resultType="WaybillVO">
+		<![CDATA[
+			SELECT WB_NUM, ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+			ORDER BY WB_NUM DESC
+		]]>
+	</select>
+</mapper>
