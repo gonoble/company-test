@@ -2,6 +2,7 @@ package com.spring.service;
 
 import java.util.List;
 
+import com.spring.domain.Criteria;
 import com.spring.domain.WaybillVO;
 
 public interface WaybillService {
@@ -15,5 +16,9 @@ public interface WaybillService {
 	public void remove(int wb_num) throws Exception;
 	
 	public List<WaybillVO> listAll() throws Exception;
+	
+	public List<WaybillVO> listCriteria(Criteria cri) throws Exception;
+	
+	public int listCountCriteria(Criteria cri) throws Exception;
 
 }

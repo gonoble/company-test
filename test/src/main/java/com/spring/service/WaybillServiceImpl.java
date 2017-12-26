@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import com.spring.domain.Criteria;
 import com.spring.domain.WaybillVO;
 import com.spring.persistence.WaybillDAO;
 
@@ -43,6 +44,18 @@ public class WaybillServiceImpl implements WaybillService {
 	public List<WaybillVO> listAll() throws Exception {
 		// TODO Auto-generated method stub
 		return dao.listAll();
+	}
+
+	@Override
+	public List<WaybillVO> listCriteria(Criteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.listCriteria(cri);
+	}
+
+	@Override
+	public int listCountCriteria(Criteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.countPaging(cri);
 	}
 
 }

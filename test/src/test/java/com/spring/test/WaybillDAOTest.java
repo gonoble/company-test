@@ -1,12 +1,19 @@
 package com.spring.test;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
 
+import com.spring.domain.Criteria;
 import com.spring.domain.WaybillVO;
 import com.spring.persistence.WaybillDAO;
 
@@ -14,7 +21,9 @@ import com.spring.persistence.WaybillDAO;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/spring/**/root-context.xml"})
 public class WaybillDAOTest {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(WaybillController.class);
+	
 	@Inject
 	private WaybillDAO dao;
 	
@@ -55,4 +64,42 @@ public class WaybillDAOTest {
 	public void testDelete()throws Exception{
 		dao.deleteWaybill(2);
 	}
+	
+	@Test
+	public void testListPage() throws Exception {
+		int page = 2;
+		
+		List<WaybillVO> list = dao.listPage(page);
+		
+		for (WaybillVO waybillVO : list) {
+			logger.info(waybillVO.getWb_num() + ":" + waybillVO.getSender());
+		}
+	}
+	
+	@Test
+	public void testCriteria() throws Exception {
+		Criteria cri = new Criteria();
+		cri.setPage(3);
+		cri.setPerPageNum(10);
+		
+		List<WaybillVO> list = dao.listCriteria(cri);
+		
+		for (WaybillVO waybillVO : list) {
+			logger.info(waybillVO.getWb_num() + ":" + waybillVO.getSender());
+		}
+	}
+	
+	@Test
+	public void testURI()throws Exception{
+		UriComponents uriComponents = UriComponentsBuilder.newInstance()
+										.path("/waybill/read")
+										.queryParam("wb_num", 12)
+										.queryParam("perPageNum", 10)
+										.build();
+		
+		logger.info("/waybill/read?wb_num=12&perPageNum=10");
+		logger.info(uriComponents.toString());
+	}
+	
+	
 }

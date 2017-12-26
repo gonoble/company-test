@@ -35,4 +35,33 @@
 			ORDER BY WB_NUM DESC
 		]]>
 	</select>
+	
+	<select id="listPage" resultType="WaybillVO">
+		<![CDATA[
+			SELECT WB_NUM, ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+			ORDER BY WB_NUM DESC
+			limit #{page}, 10
+		]]>
+	</select>
+	
+	<select id="listCriteria" resultType="WaybillVO">
+		<![CDATA[
+			SELECT WB_NUM, ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+			ORDER BY WB_NUM DESC
+			limit #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+	
+	<select id="countPaging" resultType="int">
+		<![CDATA[
+			SELECT COUNT(WB_NUM)
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+		]]>
+	</select>
+	
 </mapper>

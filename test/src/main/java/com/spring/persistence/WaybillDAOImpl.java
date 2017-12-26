@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.spring.domain.Criteria;
 import com.spring.domain.WaybillVO;
 
 @Repository
@@ -47,6 +48,28 @@ public class WaybillDAOImpl implements WaybillDAO {
 	public List<WaybillVO> listAll() throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectList(namespace + ".listAll");
+	}
+
+	@Override
+	public List<WaybillVO> listPage(int page) throws Exception {
+		// TODO Auto-generated method stub
+		if(page <= 0) {
+			page = 1;
+		}
+		page = (page - 1) * 10;
+		return sqlSession.selectList(namespace + ".listPage", page);
+	}
+
+	@Override
+	public List<WaybillVO> listCriteria(Criteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList(namespace + ".listCriteria", cri);
+	}
+
+	@Override
+	public int countPaging(Criteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace + ".countPaging", cri);
 	}
 
 }
