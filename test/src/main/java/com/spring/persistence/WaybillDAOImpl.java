@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.spring.domain.Criteria;
+import com.spring.domain.SearchCriteria;
 import com.spring.domain.WaybillVO;
 
 @Repository
@@ -70,6 +71,18 @@ public class WaybillDAOImpl implements WaybillDAO {
 	public int countPaging(Criteria cri) throws Exception {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne(namespace + ".countPaging", cri);
+	}
+
+	@Override
+	public List<WaybillVO> listSearch(SearchCriteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList(namespace + ".listSearch", cri);
+	}
+
+	@Override
+	public int listSearchCount(SearchCriteria cri) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(namespace + ".listSearchCount", cri);
 	}
 
 }

@@ -14,6 +14,7 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.spring.domain.Criteria;
+import com.spring.domain.SearchCriteria;
 import com.spring.domain.WaybillVO;
 import com.spring.persistence.WaybillDAO;
 
@@ -99,6 +100,26 @@ public class WaybillDAOTest {
 		
 		logger.info("/waybill/read?wb_num=12&perPageNum=10");
 		logger.info(uriComponents.toString());
+	}
+	
+	@Test
+	public void testDynamic1() throws Exception{
+		SearchCriteria cri = new SearchCriteria();
+		cri.setPage(1);
+		cri.setKeyword("1");
+		cri.setSearchType("wb_num");
+		
+		logger.info("================================================================");
+		
+		List<WaybillVO> list = dao.listSearch(cri);
+		
+		for (WaybillVO waybillVO : list) {
+			logger.info(waybillVO.getWb_num() + ": " + waybillVO.getSender());
+		}
+		
+		logger.info("===================================================================");
+		
+		logger.info("COUNT: " + dao.listSearchCount(cri));
 	}
 	
 	

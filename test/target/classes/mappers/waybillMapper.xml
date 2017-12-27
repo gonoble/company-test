@@ -64,4 +64,41 @@
 		]]>
 	</select>
 	
+		<sql id="search">
+		<if test="searchType != null">
+				<if test="searchType == 'w'.toString()">
+					and wb_num like CONCAT('%', #{keyword}, '%')
+				</if>
+				
+				<if test="searchType == 'o'.toString()">
+					and order_num like CONCAT('%', #{keyword}, '%')
+				</if>
+			</if> 
+		</sql>
+	
+	<select id="listSearch" resultType="WaybillVO">
+		<![CDATA[
+			SELECT WB_NUM, ORDER_NUM, SENDER, RECEIVER, QUANTITY, P_NAME, C_POINT, S_POINT, ADDRESS
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+		]]>
+		
+		<include refid="search"></include>
+		
+		<![CDATA[
+			order by wb_num desc
+			limit #{pageStart}, #{perPageNum}
+		]]>
+	</select>
+	
+	<select id="listSearchCount" resultType="int">
+		<![CDATA[
+			SELECT count(wb_num)
+			FROM WAYBILL
+			WHERE WB_NUM > 0
+		]]>
+		
+		<include refid="search"></include>
+	</select>
+	
 </mapper>

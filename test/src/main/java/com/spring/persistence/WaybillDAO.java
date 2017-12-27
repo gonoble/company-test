@@ -3,6 +3,7 @@ package com.spring.persistence;
 import java.util.List;
 
 import com.spring.domain.Criteria;
+import com.spring.domain.SearchCriteria;
 import com.spring.domain.WaybillVO;
 
 public interface WaybillDAO {
@@ -22,4 +23,8 @@ public interface WaybillDAO {
 	public List<WaybillVO> listCriteria(Criteria cri) throws Exception;
 	
 	public int countPaging(Criteria cri)throws Exception;
+	
+	public List<WaybillVO> listSearch(SearchCriteria cri) throws Exception;
+	
+	public int listSearchCount(SearchCriteria cri) throws Exception;
 }

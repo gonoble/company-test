@@ -3,6 +3,7 @@ package com.spring.service;
 import java.util.List;
 
 import com.spring.domain.Criteria;
+import com.spring.domain.SearchCriteria;
 import com.spring.domain.WaybillVO;
 
 public interface WaybillService {
@@ -20,5 +21,9 @@ public interface WaybillService {
 	public List<WaybillVO> listCriteria(Criteria cri) throws Exception;
 	
 	public int listCountCriteria(Criteria cri) throws Exception;
+	
+	public List<WaybillVO> listSearchCriteria(SearchCriteria cri) throws Exception;
+	
+	public int listSearchCount(SearchCriteria cri) throws Exception;
 
 }
