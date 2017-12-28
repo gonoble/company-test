@@ -52,7 +52,7 @@
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <!-- Messages: style can be found in dropdown.less-->
-              <li class="dropdown messages-menu">
+              <!-- <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-envelope-o"></i>
                   <span class="label label-success">4</span>
@@ -60,9 +60,9 @@
                 <ul class="dropdown-menu">
                   <li class="header">You have 4 messages</li>
                   <li>
-                    <!-- inner menu: contains the actual data -->
+                    inner menu: contains the actual data
                     <ul class="menu">
-                      <li><!-- start message -->
+                      <li>start message
                         <a href="#">
                           <div class="pull-left">
                             <img src="/resources/dist/img/user7-128x128.jpg" class="img-circle" alt="User Image"/>
@@ -73,7 +73,7 @@
                           </h4>
                           <p>Why not buy a new awesome theme?</p>
                         </a>
-                      </li><!-- end message -->
+                      </li>end message
                       <li>
                         <a href="#">
                           <div class="pull-left">
@@ -126,9 +126,9 @@
                   </li>
                   <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>
-              </li>
+              </li> -->
               <!-- Notifications: style can be found in dropdown.less -->
-              <li class="dropdown notifications-menu">
+              <!-- <li class="dropdown notifications-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-bell-o"></i>
                   <span class="label label-warning">10</span>
@@ -136,7 +136,7 @@
                 <ul class="dropdown-menu">
                   <li class="header">You have 10 notifications</li>
                   <li>
-                    <!-- inner menu: contains the actual data -->
+                    inner menu: contains the actual data
                     <ul class="menu">
                       <li>
                         <a href="#">
@@ -168,9 +168,9 @@
                   </li>
                   <li class="footer"><a href="#">View all</a></li>
                 </ul>
-              </li>
+              </li> -->
               <!-- Tasks: style can be found in dropdown.less -->
-              <li class="dropdown tasks-menu">
+              <!-- <li class="dropdown tasks-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-flag-o"></i>
                   <span class="label label-danger">9</span>
@@ -178,9 +178,9 @@
                 <ul class="dropdown-menu">
                   <li class="header">You have 9 tasks</li>
                   <li>
-                    <!-- inner menu: contains the actual data -->
+                    inner menu: contains the actual data
                     <ul class="menu">
-                      <li><!-- Task item -->
+                      <li>Task item
                         <a href="#">
                           <h3>
                             Design some buttons
@@ -192,8 +192,8 @@
                             </div>
                           </div>
                         </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
+                      </li>end task item
+                      <li>Task item
                         <a href="#">
                           <h3>
                             Create a nice theme
@@ -205,8 +205,8 @@
                             </div>
                           </div>
                         </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
+                      </li>end task item
+                      <li>Task item
                         <a href="#">
                           <h3>
                             Some task I need to do
@@ -218,8 +218,8 @@
                             </div>
                           </div>
                         </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
+                      </li>end task item
+                      <li>Task item
                         <a href="#">
                           <h3>
                             Make beautiful transitions
@@ -231,14 +231,14 @@
                             </div>
                           </div>
                         </a>
-                      </li><!-- end task item -->
+                      </li>end task item
                     </ul>
                   </li>
                   <li class="footer">
                     <a href="#">View all tasks</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -290,7 +290,7 @@
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
           <!-- Sidebar user panel -->
-          <div class="user-panel">
+         <!--  <div class="user-panel">
             <div class="pull-left image">
               <img src="/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
             </div>
@@ -299,22 +299,22 @@
 
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
-          </div>
+          </div> -->
           <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
+          <!-- <form action="#" method="get" class="sidebar-form">
             <div class="input-group">
               <input type="text" name="q" class="form-control" placeholder="Search..."/>
               <span class="input-group-btn">
                 <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
               </span>
             </div>
-          </form>
+          </form> -->
           <!-- /.search form -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <!--
-            <li class="treeview">
+            <!-- <li class="header">MAIN NAVIGATION</li> -->
+            
+            <!-- <li class="treeview">
               <a href="#">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -323,53 +323,29 @@
                 <li><a href="/resources/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
               </ul>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-files-o"></i>
-                <span>Layout Options</span>
-                <span class="label label-primary pull-right">4</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-              </ul>
-            </li>
+            
             <li>
               <a href="../widgets.html">
                 <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
               </a>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>Charts</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-                <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-                <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-                <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-              </ul>
-            </li>
+            </li> -->
+            
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>UI Elements</span>
-                <i class="fa fa-angle-left pull-right"></i>
+                <span>홈</span>
+                <!-- <i class="fa fa-angle-left pull-right"></i> -->
               </a>
-              <ul class="treeview-menu">
+              <!-- <ul class="treeview-menu">
                 <li><a href="../UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
                 <li><a href="../UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
                 <li><a href="../UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
                 <li><a href="../UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
                 <li><a href="../UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
                 <li><a href="../UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-              </ul>
+              </ul> -->
             </li>
-            <li class="treeview active">
+            <!-- <li class="treeview active">
               <a href="#">
                 <i class="fa fa-edit"></i> <span>Forms</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -381,27 +357,56 @@
               </ul>
             </li> -->
             <li class="treeview">
-              <a href="#">
+              <a href="../search/list?page=1&perPageNum=10&searchType=w&keyword=">
                 <i class="fa fa-table"></i> <span>운송장 조회</span>
+                <!-- <i class="fa fa-angle-left pull-right"></i> -->
+              </a>
+            </li>
+            
+            <li><a href="/resources/documentation/index.html"><i class="fa fa-book"></i> <span>API</span></a></li>
+            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>통계</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="../search/list"><i class="fa fa-circle-o"></i> 조회 </a></li>
-                <!-- <li><a href="../tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li> -->
+                <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+                <li><a href="../charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+                <li><a href="../charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+                <li><a href="../charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+              </ul>
+              
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-files-o"></i>
+                <span>배송정보 연동</span>
+                <!-- <span class="label label-primary pull-right">4</span> -->
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+                <li><a href="../layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+                <li><a href="../layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+                <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
               </ul>
             </li>
-           <!--  <li>
+            
+             <li>
+              <a href="../mailbox/mailbox.html">
+                <i class="fa fa-envelope"></i> <span>고객지원</span>
+                <i class="fa fa-angle-left pull-right"></i>
+                <!-- <small class="label pull-right bg-yellow">12</small> -->
+              </a>
+            </li>
+            
+           	<!-- <li>
               <a href="../calendar.html">
                 <i class="fa fa-calendar"></i> <span>Calendar</span>
                 <small class="label pull-right bg-red">3</small>
               </a>
             </li>
-            <li>
-              <a href="../mailbox/mailbox.html">
-                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                <small class="label pull-right bg-yellow">12</small>
-              </a>
-            </li>
+           
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Examples</span>
@@ -440,7 +445,7 @@
                 <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
               </ul>
             </li>
-            <li><a href="/resources/documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+            
             <li class="header">LABELS</li>
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
@@ -455,12 +460,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            General Form Elements
-            <small>Preview</small>
+            	조회 내역
+            <!-- <small>Preview</small> -->
           </h1>
-          <ol class="breadcrumb">
+          <!-- <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">Forms</a></li>
             <li class="active">General Elements</li>
-          </ol>
+          </ol> -->
         </section>

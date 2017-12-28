@@ -67,11 +67,13 @@
 		<sql id="search">
 		<if test="searchType != null">
 				<if test="searchType == 'w'.toString()">
-					and wb_num like CONCAT('%', #{keyword}, '%')
+					<!-- and wb_num like CONCAT('%', #{keyword}, '%') -->
+					and wb_num = #{keyword}
 				</if>
 				
 				<if test="searchType == 'o'.toString()">
-					and order_num like CONCAT('%', #{keyword}, '%')
+					<!-- and order_num like CONCAT('%', #{keyword}, '%') -->
+					and order_num = #{keyword}
 				</if>
 			</if> 
 		</sql>

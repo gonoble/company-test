@@ -10,17 +10,18 @@
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<div class="box-body">
 		<select name="searchType">
-			<option value="n"
-				<c:out value="${cri.searchType == null?'selected':''}"/>>---</option>
+			<%-- <option value="n"
+				<c:out value="${cri.searchType == null?'selected':''}"/>>---</option> --%>
 			<option value="w"
 				<c:out value="${cri.searchType eq 'w'?'selected':''}"/>>운송장번호</option>
 			<option value="o"
 				<c:out value="${cri.searchType eq 'o'?'selected':''}"/>>주문번호</option>
 		</select>
 	
-	
+		
 		<input type="text" name="keyword" id="keywordInput" value="${cri.keyword}">
 		<button id="searchBtn" class="btn btn-primary">검색</button>
 		<button id="newBtn" class="btn btn-danger">등록</button>
@@ -41,7 +42,7 @@
 		</tr>
 		
 	<c:forEach items="${list}" var="waybillVO">
-		<tr>
+		<tr id="tbl">
 			<td>${waybillVO.wb_num}</td>
 			<td><a href='/search/readPage${pageMaker.makeSearch(pageMaker.cri.page)}&wb_num=${waybillVO.wb_num}'>
 				${waybillVO.order_num}</a></td>
@@ -54,6 +55,7 @@
 			<td>${waybillVO.address}</td>
 		</tr>
 	</c:forEach>
+	
 	</table>
 	
 	<div class="text-center">
@@ -73,6 +75,10 @@
 			</c:if>
 		</ul>
 	</div>
+	
+
+
+
 </body>
 <script>
 	var result = '${msg}';
@@ -93,6 +99,7 @@
 			self.location = "/search/register";
 		});	
 	});
+
 </script>
 </html>
 
