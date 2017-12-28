@@ -240,13 +240,13 @@
                 </ul>
               </li> -->
               <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
+              <!-- <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="/resources/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
                   <span class="hidden-xs">Alexander Pierce</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <!-- User image -->
+                  User image
                   <li class="user-header">
                     <img src="/resources/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
@@ -254,7 +254,7 @@
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
-                  <!-- Menu Body -->
+                  Menu Body
                   <li class="user-body">
                     <div class="col-xs-4 text-center">
                       <a href="#">Followers</a>
@@ -266,7 +266,7 @@
                       <a href="#">Friends</a>
                     </div>
                   </li>
-                  <!-- Menu Footer-->
+                  Menu Footer
                   <li class="user-footer">
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -276,7 +276,7 @@
                     </div>
                   </li>
                 </ul>
-              </li>
+              </li> -->
               <!-- Control Sidebar Toggle Button -->
               <li>
                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
